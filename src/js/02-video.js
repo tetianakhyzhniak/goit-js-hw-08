@@ -1,6 +1,6 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
-KEY_TIME = 'videoplayer-current-time'
+const KEY_TIME = 'videoplayer-current-time'
 const player = new Player('handstick', {
     id: 19231868,
     width: 640
