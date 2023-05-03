@@ -1,9 +1,10 @@
 
+import throttle from 'lodash.throttle';
 LOCAL_KEY = "feedback-form-state"
 const submitForm = document.querySelector('.feedback-form');
 const textContentInput = document.querySelector('input')
 
-textContentInput.addEventListener('input', onInput);
+textContentInput.addEventListener('input', throttle(onInput), 500);
 submitForm.addEventListener('submit', onSubmit);
 let saveMessage = JSON.parse(localStorage.getItem(LOCAL_KEY)) ;
 
